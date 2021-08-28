@@ -27,10 +27,6 @@ section,
 summary {
   display: block; }
 
-iframe {
- height: 50em;
- width: 100%;
-}
 audio,
 canvas,
 video {
@@ -54,8 +50,11 @@ button,
 input,
 select,
 textarea {
-  font-family: Maven sans-serif; }
-
+  font-family: sans-serif; }
+iframe {
+  width: 100%;
+  height: 50em;
+}
 body {
   margin: 0; 
   font-family: Maven;}
@@ -118,12 +117,14 @@ pre {
   word-wrap: break-word; }
 
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
+font-size: 2.5em;
+font-family: 'Courier New', Courier, monospace;   
+}
 
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: ' " ';
+   }
 
 small {
   font-size: 80%; }
@@ -278,7 +279,7 @@ form input[type="submit"], form button, form input[type="reset"] {
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
   background-color: #c39f70;
-  border-bottom: 1px solid #a68861;
+ 
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px 25px;
@@ -286,12 +287,12 @@ form input[type="submit"], form button, form input[type="reset"] {
   color: white;
   text-transform: uppercase;
   font-family: Maven, sans-serif;
-  transition: all 0.7s;
+  transition: all 0.5s;
   font-weight: 400;
   line-height: normal; }
   .button:hover, form input[type="submit"]:hover, form button:hover, form input[type="reset"]:hover {
-    background-color: transparent;
-    color: black;
+    background-color: #866d4c;
+  
   }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background-color: #7c7975;
@@ -299,6 +300,23 @@ form input[type="submit"], form button, form input[type="reset"] {
     color: black; }
     .button.secondary:hover, form input.secondary[type="submit"]:hover, form button.secondary:hover, form input.secondary[type="reset"]:hover {
      background-color: transparent;
+    }
+    .slogan {
+      margin: 2em auto auto auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      padding: 3em;
+    }
+    .slogan h1 {
+      font-size: 3em;
+      color: #5f4f3b;
+    }
+    .slogan p {
+      font-size: 1.5em;
+      font-weight: 600;
+      font-style: italic;
     }
 .container {
   margin-right: auto;
@@ -1292,15 +1310,16 @@ border: 5px solid #c39f70;
       color: white;
       font-family: Maven, sans-serif;
       border-radius: 150px;
-      border: 5px solid #9c8362;
-      transition: all 0.8s;
+      border: 5px solid transparent;
+      transition: all 0.5s;
       font-size: 18px;
       font-size: 1.2857142857em; }
      
       .hero .slides .button:hover, .hero .slides form input[type="submit"]:hover, form .hero .slides input[type="submit"]:hover, .hero .slides form button:hover, form .hero .slides button:hover, .hero .slides form input[type="reset"]:hover, form .hero .slides input[type="reset"]:hover {
-        background-color: transparent;
+        background-color: #5f4f3b;
+       
       }
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 780px) {
         .hero .slides .button, .hero .slides form input[type="submit"], form .hero .slides input[type="submit"], .hero .slides form button, form .hero .slides button, .hero .slides form input[type="reset"], form .hero .slides input[type="reset"] {
           width: 70%;
         }
@@ -1330,15 +1349,17 @@ border: 5px solid #c39f70;
           position: fixed;
           background-color: #9c8362;
           border-radius: 100%;
+          border-color: transparent;
           width: 5em;
           height: 5em;
           margin-bottom: 1%;
-          transition: all 0.7s;
-          right: 0;
-          bottom: 0;
+          transition: all 0.6s, background-color 0.5s;
+          right: 0.5em;
+          bottom: 0.8em;
           opacity: 0;
           margin-right: 1%;
           z-index: 5;
+          box-shadow: 5px 5px 9px #000000, -4px 5px 9px black;
          cursor: auto;
         }
         .scrollup img {
@@ -1346,6 +1367,9 @@ border: 5px solid #c39f70;
           height: 50%;
           position: relative;
           margin-top: 20%;
+        }
+        .scrollup:hover {
+          background-color: #d4b285;
         }
         .about-priest {
           margin-bottom: 4%;
@@ -1358,6 +1382,16 @@ margin-top: 1em;
 }
 .about-priest img {
   width: 35%;
+}
+@media screen and (max-width: 600px) {
+  .about-priest img {
+    width: 100%;
+  }
+}
+.about-priest #phone, .about-priest #phone i {
+  color: #8a5c50;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 .page-head {
   background-size: cover;
@@ -1430,16 +1464,17 @@ margin-top: 1em;
         transition: all 0.6s;
         margin-bottom: 30px; }
         @media screen and (max-width: 640px) {
-        .news2 .news-image {
+        .news2 a .news-image {
           width: 100%;
           max-width: 100%;
           height: auto;
           max-height: auto;
           margin-bottom: 20px; }
+        
         }
         .news2 .news-image {
-          width: 35%;
-          max-width: 35%;
+          width: 50%;
+          max-width: 50%;
           height: auto;
           max-height: auto;
           margin-bottom: 20px; }
@@ -1585,7 +1620,7 @@ margin-top: 1em;
     font-size: 18px;
     font-size: 1.2857142857em;
     font-weight: 600; }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 980px) {
   .sidebar img {
     width: 100%;
     height: auto;
