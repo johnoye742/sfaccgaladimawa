@@ -296,10 +296,10 @@ form input[type="submit"], form button, form input[type="reset"] {
   }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background-color: #7c7975;
-    border-bottom: 1px solid #b1aea8;
     color: black; }
     .button.secondary:hover, form input.secondary[type="submit"]:hover, form button.secondary:hover, form input.secondary[type="reset"]:hover {
-     background-color: transparent;
+     background-color: #4d4b48;
+     color: #ffffff;
     }
     .slogan {
       margin: 2em auto auto auto;
@@ -1469,10 +1469,10 @@ margin-top: 1em;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          
+          align-items: center;
         }
-        .news3 p {
-
+        .news3 p, .news3 h2 {
+           text-align: center;
         }
         .news3 img {
           width: 87%;
@@ -1628,13 +1628,19 @@ margin-top: 1em;
   .seremon-list.large .seremon-meta .pastor, .seremon-list.large .seremon-meta .date {
     display: inline-block;
     margin-right: 20px; }
-
+/*
+added .families to make families page like a gallery using flex cause what they did before is s**t
+*/
+    .families {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .family {
   width: 33.333%;
-  float: left;
   padding: 0 15px;
-  text-align: center;
-  margin-bottom: 5%; }
+  align-items: center;
+   }
   @media screen and (max-width: 640px) {
     .family {
       width: 50%; } }
