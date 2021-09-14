@@ -36,3 +36,13 @@ window.onscroll=()=>{
 	  scrollb.style.cursor = "auto";
 	}
 }
+
+function validateForm() {
+	var name = document.getElementById("name").innerHTML;
+	var email = document.getElementById("email").innerHTML;
+	if(name == null || name == "" || email == null || email == "") {
+         alert("Please fill all fields");
+	} else {
+		
+	}
+}

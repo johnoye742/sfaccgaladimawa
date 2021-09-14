@@ -273,6 +273,68 @@ form textarea {
 form input[type="submit"], form button, form input[type="reset"] {
   border: none; }
 
+header .nav-back {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 2em;
+  position: fixed;
+  background-color: #866d4c;
+  padding: 1em;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+}
+header .nav-back img {
+width: 3em;
+height: 3em;
+}
+header .nav-back h4 {
+margin-top: 1em;
+margin-left: 0.5em;
+color: white;
+font-size: 1.5em;
+}
+  /* Blog Comment codes */
+  .comments-section {
+    display: flex;
+    margin-top: 1.5em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .comments-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .comments-section form input {
+    margin-bottom: 2em;
+    background-color: #7c7975;
+    color: white;
+    width: 60%;
+  }
+  .comments-section form textarea {
+    width: 80%;
+    height: 20em;
+    background-color: #7c7975;
+    margin-bottom: 2em;
+    color:#ffffff;
+  }
+ .comments-section .comments {
+   display: flex;
+   flex-direction: column;
+ }
+ .comments-section .comments .comment {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+ }
+ .comments-section .comments .comment img {
+  border-radius: 150px;
+  height: 3em;
+  width: 3em;
+  
+ }
 /*
  * Reusable Components Style
  */
@@ -301,6 +363,7 @@ form input[type="submit"], form button, form input[type="reset"] {
      background-color: #4d4b48;
      color: #ffffff;
     }
+    /* why the hell did i put auto auto auto for the remaining margins i've no damn idea*/
     .slogan {
       margin: 2em auto auto auto;
       display: flex;

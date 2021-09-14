@@ -53,11 +53,15 @@ textarea {
   font-family: sans-serif; }
 iframe {
   width: 100%;
-  height: 50em;
+  
+}
+iframe.reading {
+  height: 100em;
 }
 body {
   margin: 0; 
-  font-family: Maven;}
+  font-family: Maven;
+}
 
 a {
   background: transparent; }
@@ -273,6 +277,58 @@ form textarea {
 form input[type="submit"], form button, form input[type="reset"] {
   border: none; }
 
+  .social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+  .social img {
+    height: 5em;
+    width: 5em;
+    margin-left: 1em;
+  }
+
+  .news-letter form, .email-us form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .news-letter input, .email-us input {
+    background-color: #292932;
+    margin-bottom: 1em;
+    padding: 20px;
+    color: white;
+  }
+  .email-us textarea {
+    background-color: #292932;
+    height: 30em;
+    margin-bottom: 1em;
+    color: white;
+  }
+
+
+  /*Codes for videos page*/
+  .videos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .videos .video {
+   width: 100%;
+   height: auto;
+   text-align: center;
+   color: #000000;
+   padding: 1em 0 1em 0;
+   border-bottom: 1px solid #7c7975;;
+  }
+ 
+  .videos .video video {
+    width: 100%;
+  }
 /*
  * Reusable Components Style
  */
@@ -371,6 +427,8 @@ form input[type="submit"], form button, form input[type="reset"] {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
+  
+  
   padding-right: 15px; }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
@@ -1507,6 +1565,11 @@ margin-top: 1em;
     position: relative;
     margin-bottom: 1em;
     border-bottom: 1px solid #e5e5e5; }
+    .event-list li img {
+      height: auto;
+      width: 100%;
+      margin-bottom: 1em;
+    }
     .event-list li:first-child {
       border-top: 1px solid #e5e5e5; }
   .event-list .event-title {
@@ -1543,10 +1606,12 @@ margin-top: 1em;
     padding: 20px 0; }
   .event-list.large .event-title {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px; 
+  font-size: x-large;}
   .event-list.large .event-meta {
     position: relative;
     margin-bottom: 20px;
+    margin-top: 1em;
     display: block; }
     .event-list.large .event-meta span {
       width: auto;
@@ -1594,6 +1659,25 @@ margin-top: 1em;
   .seremon-list.large .seremon-meta .pastor, .seremon-list.large .seremon-meta .date {
     display: inline-block;
     margin-right: 20px; }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .gallery .gallery-item {
+       width: 40%;
+       height: auto;
+       margin-bottom: 1em;
+       margin-left: 1em;
+    }
+    .gallery .gallery-item img {
+      width: 100%;
+    }
+    @media screen and (max-width: 980px) {
+      .gallery .gallery-item {
+        width: 100%;
+      }
+    }
 .families {
   display: flex;
   flex-wrap: wrap;
