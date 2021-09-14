@@ -329,6 +329,10 @@ form input[type="submit"], form button, form input[type="reset"] {
   .videos .video video {
     width: 100%;
   }
+  .videos .video p {
+    text-align: center;
+    
+  }
 /*
  * Reusable Components Style
  */
