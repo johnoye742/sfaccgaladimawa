@@ -375,6 +375,19 @@ form input[type="submit"], form button, form input[type="reset"] {
   margin-bottom: 1em;
   height: auto;
 }
+.about .societies, .about-colored .societies {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.about .societies li, .about-colored .societies li {
+padding: 2em;
+border-bottom: 1px solid #7c7975;
+}
+.about .societies .button, .about-colored .societies .button {
+  cursor: pointer;
+}
 /*
  * Reusable Components Style
  */

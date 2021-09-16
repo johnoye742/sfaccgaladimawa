@@ -14,6 +14,9 @@
 			directionNav: false,
 			controlNav: true
 		});
+		$(".societies li a").click(function(){
+            
+		});
 	});
 
 	$(window).load(function(){
